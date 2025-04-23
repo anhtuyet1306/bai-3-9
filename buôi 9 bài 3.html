@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Cá Nhân – Sidebar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #fce4ec;
+      color: #333;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 220px;
+      background-color: #f48fb1;
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 10px;
+      border-radius: 5px;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background-color: #d81b60;
+    }
+
+    /* CONTENT */
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #f06292;
+      margin-bottom: 10px;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .so-thich-item {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .so-thich-item img {
+      width: 150px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .so-thich-item p {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      background: #f48fb1;
+      color: white;
+    }
+
+    /* RESPONSIVE – đổi sidebar thành topbar */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        position: static;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .sidebar a {
+        margin: 5px;
+        padding: 10px 12px;
+      }
+
+      .content {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR MENU -->
+  <nav class="sidebar">
+    <h2>MENU</h2>
+    <a href="#gioi-thieu">Giới thiệu</a>
+    <a href="#so-thich">Sở thích</a>
+    <a href="#hoc-tap">Học tập</a>
+    <a href="#dinh-huong">Định hướng</a>
+    <a href="#lien-ket">Bài tập</a>
+    <a href="#lien-he">Liên hệ</a>
+  </nav>
+
+  <!-- NỘI DUNG CHÍNH -->
+  <main class="content">
+    <header>
+      <h1>Portfolio cá nhân – Đặng Ánh Tuyết</h1>
+    </header>
+
+    <section id="gioi-thieu">
+      <h2>Giới thiệu</h2>
+      <img class="profile-img" src="https://i.pinimg.com/736x/cf/38/49/cf3849169cc60b01a9fae89f2e775d76.jpg" alt="Ảnh cá nhân" />
+      <p><strong>Họ tên:</strong> Đặng Ánh Tuyết</p>
+      <p><strong>Ngành học:</strong> Công nghệ thông tin – Đại học Thủ Đô Hà Nội</p>
+    </section>
+
+    <section id="so-thich">
+      <h2>Sở thích & Khả năng</h2>
+      <div class="so-thich-item">
+        <img src="https://i.pinimg.com/736x/66/7d/07/667d072b779719456e41b5f8f4429450.jpg" alt="Nghe nhạc" />
+        <p>♬ Thích nghe nhạc</p>
+      </div>
+      <div class="so-thich-item">
+        <img src="https://i.pinimg.com/736x/f8/bb/96/f8bb96bad6351415de56631be4c31083.jpg" alt="Chụp ảnh" />
+        <p>📸 Chụp ảnh nghệ thuật</p>
+      </div>
+    </section>
+
+    <section id="hoc-tap">
+      <h2>Quá trình học tập</h2>
+      <p>🏫 Hiện đang theo học tại Trường Đại học Thủ Đô Hà Nội</p>
+    </section>
+
+    <section id="dinh-huong">
+      <h2>Định hướng nghề nghiệp</h2>
+      <p>💼 Mục tiêu: Trở thành một kỹ sư phần mềm chuyên nghiệp.</p>
+    </section>
+
+    <section id="lien-ket">
+      <h2>Liên kết bài tập</h2>
+      <ul>
+        <li><a href="https://anhtuyet1306.github.io/HTML/">📂 Bài tập 1</a></li>
+        <li><a href="https://anhtuyet1306.github.io/B-i-T-p/">📂 Bài tập 2</a></li>
+        <li><a href="https://anhtuyet1306.github.io/bu-i-3/">📂 Bài tập 3</a></li>
+        <li><a href="https://anhtuyet1306.github.io/bu-i-4/">📂 Bài tập 4</a></li>
+        <li><a href="https://anhtuyet1306.github.io/Buoi-5/">📂 Bài tập 5</a></li>
+        <li><a href="https://anhtuyet1306.github.io/buoi-6/">📂 Bài tập 6</a></li>
+        <li><a href="https://anhtuyet1306.github.io/buoi-7/">📂 Bài tập 7</a></li>
+        <li><a href="https://anhtuyet1306.github.io/buoi-8/">📂 Bài tập 8</a></li>
+      </ul>
+    </section>
+
+    <section id="lien-he">
+      <h2>Liên hệ</h2>
+      <p>📧 Email: dangtuyet969@gmail.com</p>
+      <p>📞 SĐT: 0865 289 872</p>
+      <p>📍 Địa chỉ: Hà Nội, Việt Nam</p>
+    </section>
+
+  <footer>
+    <p>© 2025 – Ánh Toét 😄</p>
+  </footer>
+
+</body>
+</html>
+
